@@ -13,6 +13,9 @@ public class Main {
 		// Task 2
 		int[] nums = new int[] {2, 7, 11, 15};
 		Arrays.stream(twoSum(nums, 9)).forEach(System.out::println);
+		
+		// Task 3
+		System.out.println(reverse(123));
 	}
 
 	/*	Task 1
@@ -94,7 +97,29 @@ public class Main {
 		}
 		return result;
 	}
-
+	
+	// Task 3
+	/* Reverse an Integer
+	 * int x = 123 -> x = 321
+	 * */
+	
+	public static int reverse(int x) {
+		
+		// Values
+		int result = 0;
+        
+		// Methods
+        while (x != 0){
+        	
+            int lastDigit = x % 10;
+            
+            result = result * 10 + lastDigit;
+            x = x / 10;
+            
+        }
+        return result;
+    }
+    
 
 
 }
